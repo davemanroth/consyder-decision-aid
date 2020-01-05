@@ -1,3 +1,5 @@
+// Stateless component that renders a modal
+
 import React from 'react';
 
 const Modal = (props) => {

@@ -1,3 +1,6 @@
+// Stateless component that logs the user out, clearing data from
+// the "store" module, and redirecting to the login page
+
 import React from 'react';
 import store from 'store';
 import { NavLink, Redirect, withRouter } from 'react-router-dom';

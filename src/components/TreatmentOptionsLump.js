@@ -1,3 +1,6 @@
+// Stateless component that renders Lumpectomy treatment option and
+// corresponding Lumpectomy accordion
+
 import React from 'react';
 import LumpectomyAccordion from './accordions/LumpectomyAccordion';
 

@@ -1,3 +1,5 @@
+// Stateless component that renders the homepage of the decision aid
+
 import React from "react";
 import { Link } from "react-router-dom";
 

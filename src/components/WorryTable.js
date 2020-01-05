@@ -1,3 +1,7 @@
+// React class that renders a table with a questions about anxiety levels and
+// corresponding number scales. Content is imported from JSON file and passed
+// to the table.
+
 import React, { Component } from 'react';
 import { numArray, toInt } from '../helpers/utilities.js';
 import worry_content from '../helpers/worry_content.json';

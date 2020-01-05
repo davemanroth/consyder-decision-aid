@@ -1,3 +1,8 @@
+// React class that renders a horizontal number scale with values
+// ranging from 0 - 10. If the user selects any value >= 6, the 
+// ValuesResponse appears giving the user feedback about the option
+// she chose.
+
 import React, { Component } from "react";
 import ValuesResponse from "./ValuesResponse";
 import { numArray, toInt } from "../helpers/utilities.js";

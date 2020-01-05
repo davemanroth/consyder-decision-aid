@@ -1,3 +1,5 @@
+// Stateless component to render information only about Lumpectomy
+
 import React from 'react';
 
 export default (props) => (

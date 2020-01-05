@@ -1,3 +1,7 @@
+// Basic React class that renders a form to capture a user's email 
+// address if she chooses to have a study administrator contact her 
+// for emotional support.
+
 import React, { Component } from 'react';
 
 class EmailForm extends Component {

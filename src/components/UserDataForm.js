@@ -1,3 +1,7 @@
+// React class that renders a form, in conjunction with 
+// UserDataFields component, allowing admins to add or edit
+// users.
+
 import React, { Component } from 'react';
 import UserDataFields from './UserDataFields';
 import Modal from 'react-bootstrap/Modal';

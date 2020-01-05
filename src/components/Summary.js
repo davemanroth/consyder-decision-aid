@@ -1,3 +1,8 @@
+// React class that renders the final Summary screen of the decision aid.
+// This screen shows the treatment comparison table, the user's responses to 
+// values questions, and responses to next steps. Finally, it gives the user
+// the option to print a print-formatted copy of the summary screen.
+
 import React, { useEffect } from "react";
 import store from "store";
 import TreatmentComparison from "./TreatmentComparison";

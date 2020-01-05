@@ -1,3 +1,8 @@
+// React class that primarily renders static text explaining about
+// supportive resources for breast cancer patients and also provides 
+// a means (via the EmailForm component) for the user to input her email 
+// address and have a study administrator contact her for emotional support
+
 import React, { Component } from "react";
 import EmailForm from "./EmailForm";
 import NextButton from "./NextButton";

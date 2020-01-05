@@ -1,3 +1,7 @@
+// Stateless component that renders static text explaining about all breast
+// cancer surgery options. It uses Accordion ui component to collapse
+// information, making the page more legible.
+
 import React, { useState, useEffect } from "react";
 import store from "store";
 import LumpectomyAccordion from "./accordions/LumpectomyAccordion";

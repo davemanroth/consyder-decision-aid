@@ -1,3 +1,7 @@
+// Stateless component that renders a big table showing differences in
+// lumpectomy, mastectomy, and bilateral mastectomy surgery options. All
+// bilateral mastectomy data is hidden by default but can be toggled on/off.
+
 import React, { useState, useEffect } from "react";
 import store from "store";
 import NextButton from "./NextButton";

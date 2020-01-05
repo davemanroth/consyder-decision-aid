@@ -1,3 +1,9 @@
+// Very complex and annoying React class that handles the multiple choice
+// radio buttons and checkboxes used in the Next steps portion of the decision
+// aid. There is a fair amount of sophistication and decision trees based on
+// certain options a user selects. The storeResult function does most of the 
+// heavy lifting.
+
 import React, { Component } from "react";
 import store from "store";
 import OtherTextField from "./OtherTextField";
@@ -8,6 +14,10 @@ class MultChoiceQuest extends Component {
     super(props);
     let storedResponse = props.storedResponse;
     let hasOtherCheck = false;
+
+// Check the props to determine if any of the "Other" text areas were 
+// enabled (stored as option "6") and make sure they're shown right 
+// when this component loads
     if (exists(props.storedResponse)) {
       hasOtherCheck = props.storedResponse === "6" || props.storedResponse.includes("6");
     }
@@ -44,6 +54,8 @@ class MultChoiceQuest extends Component {
     return e.target.type === "checkbox"
   }
 
+// Review data from radio buttons/checkboxes/text areas
+// and take appropriate actions
   storeResult = (e) => {
     let toStore = { ...this.state };
     if (this.otherWasSelected(e) && !this.isCheckbox(e) ) {
@@ -109,6 +121,7 @@ class MultChoiceQuest extends Component {
         <div className="form-check">
           { this.props.choices.map( (choice, i) => {
             return (
+            // Only show Lumpectomy option if the user qualifies for it
               <div key={i} className={ (choice === "Lumpectomy" && !user.lump) ? "remove-from-view" : "visible"}>
                 <input 
                   className="form-check-input" 
@@ -126,6 +139,8 @@ class MultChoiceQuest extends Component {
             );
           })}
         </div>
+  // Hide the Other text area by default, only show if "Other" radio
+  // button/checkbox activated
         <OtherTextField
          display={ this.state.showOther }
          name={ this.props.name + "_other_text" }

@@ -1,3 +1,7 @@
+// React class that renders the Values Clarification screen of the decision
+// aid wherein users are asked questions about their values. Content is
+// imported from a JSON file and passed to NumberScale component via props.
+
 import React, { Component } from 'react';
 import store from "store";
 import NextButton from './NextButton';

@@ -1,3 +1,9 @@
+// React class that renders the Next steps screen of the decision aid, 
+// giving the user the opportunity to choose which surgery she's leaning toward
+// or if she's not ready to make a decision. This class relies heavily on the
+// MultChoiceQuest component which handles most of the complexity of this
+// screen.
+
 import React, { Component } from "react";
 import MultChoiceQuest from "./MultChoiceQuest";
 import NextButton from "./NextButton";

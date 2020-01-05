@@ -1,3 +1,7 @@
+// React class responsible for displaying a list of all current
+// registered users in the database. Also handles user editing/deletion,
+// passing functionality through props.
+
 import React, { Component } from 'react';
 
 class UserList extends Component {
@@ -13,7 +17,6 @@ class UserList extends Component {
     const row = e.target.closest("tr");
     row.closest("tr").remove();
     this.props.onDelete(row.id);
-    //window.location.reload();
   }
 
   onEdit = (e) => {

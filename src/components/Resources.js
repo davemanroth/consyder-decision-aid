@@ -1,3 +1,6 @@
+// Stateless component rendering static text about resources for young women
+// with breast cancer
+
 import React from 'react';
 
 const Resources = (props) => {

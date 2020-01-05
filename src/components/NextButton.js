@@ -1,3 +1,5 @@
+// Stateless component to render a "Next" button
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 

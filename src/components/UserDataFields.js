@@ -1,3 +1,6 @@
+// Stateless component that renders form fields for new user data input used in
+// Admin and Modal components
+
 import React from 'react';
 
 const UserDataFields = (props) => {

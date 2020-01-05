@@ -1,3 +1,6 @@
+// Stateless component that renders an html textarea for user to fill in
+// a custom "Other" option to Next steps component
+
 import React from "react";
 
 const OtherTextField = (props) => {

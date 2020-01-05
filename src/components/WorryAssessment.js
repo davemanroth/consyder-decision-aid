@@ -1,3 +1,7 @@
+// React class that renders the "How are you feeling" screen of the decision
+// aid. Using NumberScale and WorryTable components, users are presented with 
+// questions to evaluate anxiety/stress levels.
+
 import React, { Component } from 'react';
 import { animateScroll } from "react-scroll";
 import NumberScale from './NumberScale';
