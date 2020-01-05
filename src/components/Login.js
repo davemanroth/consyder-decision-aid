@@ -1,3 +1,11 @@
+/**
+ * This component is default login screen all anonymous users
+ * are presented with when loading the decision aid. It uses the "store"
+ * module (html local storage) to emulate a user session. Upon successful 
+ * login, user data is stored in the store and constantly checked as each new
+ * component is loaded. Any attempts by anonymous users to access restricted
+ * areas will result in redirection to this login component.
+ */
 import React, { Component } from "react";
 import axios from "axios";
 import store from "store";
@@ -58,6 +66,7 @@ class Login extends Component {
       this.showFieldEmptyError(this.state);
       return false;
     }
+// Use the api to query whether the user exists
     axios({
       method: "post",
       data: this.state,
@@ -76,6 +85,8 @@ class Login extends Component {
       });
   }
 
+// Function to save logged in user to "store" module, allowing
+// user to use the decision aid
   evaluateLogin = (result) => {
     if (result) {
       const sessionid = makeSessionId();
@@ -89,7 +100,6 @@ class Login extends Component {
       });
       this.props.startSessionTimer();
       this.props.history.push("/");
-      //console.log(store.get("user"));
     }
     else {
       const alert = ["Incorrect username and/or password. If you forgot your username/password, please contact us"]
@@ -103,10 +113,12 @@ class Login extends Component {
   }
       
   render() {
+// First check if user is already logged in, redirect to homepage if so
     if (isLoggedIn()) {
       return <Redirect to="/" />
     }
     return (
+// Alert component to show failed login message
       <div>
         <Alert
           variant="danger"

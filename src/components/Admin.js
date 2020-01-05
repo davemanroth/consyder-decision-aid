@@ -1,3 +1,7 @@
+// React class responsible for all front-end user management utilities.
+// Administrators can create news users, view/update/delete existing users.
+// Basic user permissions are also added (whether user is eligible for
+// lumpectomy or whether user is an administrator) 
 import React, { Component } from 'react';
 import axios from 'axios';
 import { animateScroll } from "react-scroll";
@@ -46,6 +50,8 @@ class Admin extends Component {
     };
   }
 
+// Immediately retrieve all current users from api once the component loads
+// and store it in state
   componentDidMount = () => {
     axios({
       method: 'get',
@@ -98,6 +104,7 @@ class Admin extends Component {
     this.setState({ alert : alert });
   }
 
+// Function to handle new user form submissions
   handleUserFormSubmit = (data) => {
     animateScroll.scrollToTop({ duration: 100 });
     if (this.hasBlankOrMissingFields(data)) {
@@ -119,6 +126,8 @@ class Admin extends Component {
           text: "",
           alertContent: ["User added successfully"]
         }
+// If new user saved properly, immediately save to state so the table of
+// users is updated on the fly
         updated_rows.push(newdata);
         this.setState({ 
           alert: alertObj,
@@ -251,6 +260,9 @@ class Admin extends Component {
           })} 
         </Alert>
 
+// This modal only appears if an admin clicks the "update" button corresponding
+// to a particular user. The modal then appears with the user's data displayed
+// in form fields, allowing the admin to update the data
         <Modal show={ this.state.modal.show} onHide={ this.handleModalClose }>
           <Modal.Header closeButton>
             <Modal.Title>User update</Modal.Title>

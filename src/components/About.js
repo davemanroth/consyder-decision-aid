@@ -1,3 +1,5 @@
+// Stateless component with static text explaining about the decision aid
+
 import React from 'react';
 
 const About = (props) => {
