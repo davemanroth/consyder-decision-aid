@@ -1,3 +1,14 @@
+/**
+ * React app entry point
+ *
+ * Author: Dave Rothfarb
+ * Project: Consyder breast cancer decision aid
+ * Health Communication Core 2019
+ *
+ * This is the React entry point that initializes Google Analytics and
+ * renders the main decision aid App.js using ReactDOM.render
+ */
+
 import React from "react";
 import ReactDOM from "react-dom";
 import "babel-polyfill";

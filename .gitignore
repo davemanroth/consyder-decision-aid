@@ -28,3 +28,5 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 api/globals.php
+__tests__
+setupTests.js
